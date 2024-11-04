@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Water Conservation</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Contact Water Conservation to learn more about our initiatives and how you can help preserve water resources.">
+</head>
+<body>
+    <!-- Header and Navigation -->
+    <header>
+        <div class="logo">
+            <h1>Contact Us</h1>
+        </div>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Contact Form Section -->
+        <section class="contact-form">
+            <h2>We'd Love to Hear From You</h2>
+            <p>If you have questions or feedback, please fill out the form below and we will get back to you as soon as possible.</p>
+            <form action="submit_contact.php" method="post" id="contactForm">
+                <div class="form-group">
+                    <label for="name"><i class="fas fa-user"></i> Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email"><i class="fas fa-envelope"></i> Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject"><i class="fas fa-tag"></i> Subject:</label>
+                    <input type="text" id="subject" name="subject" placeholder="Subject of your message" required>
+                </div>
+                <div class="form-group">
+                    <label for="message"><i class="fas fa-comment"></i> Message:</label>
+                    <textarea id="message" name="message" rows="6" placeholder="Type your message here..." required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+                <div id="confirmation" style="display:none; margin-top: 1rem; color: green;">Thank you for your message! We will get back to you soon.</div>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer with Social Media Links -->
+    <footer>
+        <p>&copy; 2024 Water Conservation | All Rights Reserved</p>
+        <div class="social-links">
+            <a href="https://facebook.com" aria-label="Facebook" target="_blank">Facebook</a> |
+            <a href="https://twitter.com" aria-label="Twitter" target="_blank">Twitter</a> |
+            <a href="https://instagram.com" aria-label="Instagram" target="_blank">Instagram</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Simple form submission handler (replace with actual implementation)
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+            document.getElementById('confirmation').style.display = 'block'; // Show confirmation message
+            this.reset(); // Reset form fields
+        });
+    </script>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</body>
+</html>
